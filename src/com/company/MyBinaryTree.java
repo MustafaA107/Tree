@@ -34,6 +34,29 @@ public class MyBinaryTree {
     return root;
     }
 
+    private TreeNode searchNode(TreeNode root,int key){
+        if(root==null){
+            System.out.println("Was not found");
+            return null;
+        }
+        if(root.key==key) {
+            System.out.println("Found");
+            return root;
+        }
+        if(root.key>key)
+            return searchNode(root.left,key);
+        if(root.key<key)
+            return searchNode(root.right,key);
+
+        System.out.println("Was not found");
+        return null;
+    }
+
+    public void search(int key){
+        searchNode(root,key);
+    }
+
+
     public void inorder(){
         inorderRec(root);
     }

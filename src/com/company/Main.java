@@ -14,7 +14,9 @@ public class Main {
         tree.insert(33);
         tree.insert(97);
         tree.insert(567);
-        tree.inorder();
+
+
+        tree.search(5);
 
 
 
